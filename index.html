@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Teste 0.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de Projetos Online para Vidraçaria</h1>
+    </header>
+    <section>
+        <div>
+            <p id="p">Nome da empresa:<br>
+                <input type="text" id="textnome" placeholder="Digite o nome da empresa..">
+            </p>
+            <p id="grupo">Tipo:
+                <input type="radio" name="radtipo" id="jquaf" checked>
+                <label for="jquaf">Janela 4f</label>
+                <input type="radio" name="radtipo" id="jduasf">
+                <label for="jduasf">Janela 2f</label>
+                <input type="radio" name="radtipo" id="iportap">
+                <label for="iportap">Porta Pivotante</label><br>
+                <input type="radio" name="radtipo" id="pquaf">
+                <label for="pquaf">Porta 4f</label>
+                <input type="radio" name="radtipo" id="pduasf">
+                <label for="pduasf">Porta 2f</label>
+                <input type="radio" name="radtipo" id="basc">
+                <label for="basc">Bascula</label>
+            </p>
+            <hr>
+            <p>
+                <input type="button" value="Carregar" onclick="carregar()" id="btn">
+            </p>
+            <p>
+                <input type="reset" value="Limpar" onclick="window.location.reload()" id="rbtn">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os campos acima para Carregar o projeto!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; BrenoPinheiro</p>
+    </footer>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

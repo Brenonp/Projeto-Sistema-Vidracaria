@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Janela 2 Folhas</title>
+    <link rel="stylesheet" href="janela.css">
+</head>
+<body>
+    <header>
+        <div class="f1">
+          <button id="btnprincipal"><a href="../index.html"><img src="home-icon.png" alt="home"></a></button>
+        </div>
+        <div class="f2">
+          <button id="gerarpdfbtn" onclick="pdf()"><img src="filepdf.png" alt="pdf"></button>
+        </div>
+        <div class="f3">
+          <button id="limparbtn"onclick="window.location.reload()" ><img src="reload.png" alt="reload" ></button>
+        </div>
+      </header>
+  
+      <p id="p">
+        <label for="itempera" class="temperac">TEMPERA:</label>
+        <input type="text" name="tempera" id="itempera" list="lstemp" placeholder="Selecionar Tempera...">
+        <datalist id="lstemp">
+          <option>BLINDEX</option>
+          <option>CRISTAL FORTE</option>
+          <option>ESTRELA VIDROS</option>
+          <option>GLASS TEMPER</option>
+          <option>SIEPIERSKI</option>
+          <option>TEMPER MAX</option>
+          <option>TERMARI</option>
+          <option>VIMINAS</option>
+        </datalist>
+      </p>
+      <section id="dados">
+          <div>
+            <div id="container">
+              <label for="iempresa">EMPRESA:</label>
+              <input type="text" id="iempresa">
+  
+              <label for="inp">N° PED.:</label>
+              <input type="number" id="inp">
+  
+              <label for="idata">DATA:</label>
+              <input type="date" name="ndata" id="idata">
+            </div>
+  
+            <div id="container">
+              <label for="icodclient">COD. CLIENTE:</label>
+              <input type="text" id="icodclient">
+  
+              <label for="iestado">ESTADO:</label>
+              <input type="text" id="iestado">
+  
+              <label for="icidade">CIDADE:</label>
+              <input type="text" id="icidade">
+            </div>
+  
+            <fieldset id="containerfield">
+              <legend>ESPESSURA DO VIDRO</legend>
+              <input type="radio" name="espvidro" id="i4">
+              <label for="i4" id="radio2">4mm</label>
+              <input type="radio" name="espvidro" id="i5">
+              <label for="i5" id="radio2">5mm</label>
+              <input type="radio" name="espvidro" id="i6" checked>
+              <label for="i6" id="radio2">6mm</label>
+              <input type="radio" name="espvidro" id="i8" >
+              <label for="i8" id="radio2">8mm</label>
+              <input type="radio" name="espvidro" id="i10">
+              <label for="i10" id="radio2">10mm</label>
+              <input type="radio" name="espvidro" id="i12">
+              <label for="i12" id="radio2">12mm</label>
+              <input type="radio" name="espvidro" id="i15">
+              <label for="i15" id="radio2">15mm</label>
+      
+            </fieldset>
+            
+            <fieldset id="containerfield">
+              <legend>COR DO VIDRO</legend>
+              <input type="radio" name="corvidro" id="iincolor" checked>
+              <label for="iincolor" id="radio2">INCOLOR</label>
+              <input type="radio" name="corvidro" id="iverde">
+              <label for="iverde" id="radio2">VERDE</label>
+              <input type="radio" name="corvidro" id="ifume">
+              <label for="ifume" id="radio2">FUMÊ</label>
+              <input type="radio" name="corvidro" id="ibronze">
+              <label for="ibronze" id="radio2">BRONZE</label>
+              <input type="radio" name="corvidro" id="iazul">
+              <label for="iazul" id="radio2">AZUL</label>
+              <input type="radio" name="corvidro" id="irefletivo">
+              <label for="irefletivo" id="radio2">REFLETIVO</label>
+              
+            </fieldset>
+  
+            <fieldset id="containerfield">
+              <legend>ESPECIFICAÇÃO</legend>
+              <label for="">MEDIDA DO VÃO (mm):</label>
+              <input type="number" id="vaoAbtn" oninput="somarAltura()" placeholder="Altura..." autocomplete="on">
+              <label for=""><strong>X</strong></label>
+              <input type="number" id="vaoLbtn" oninput="somarLargura()" placeholder="Largura..." autocomplete="on">
+
+              <label for="qtdbtn">QTD. JANELA(S):</label>
+              <input type="number" id="qtdbtn" oninput="qtdPecas()" placeholder="Digite..." >
+            </fieldset>
+  
+  
+          </div>
+      </section>
+      <main>
+        <section id="iimg">
+          <div >
+            <div>
+              <div id="qtd1"></div>
+              <div id="qtd2"></div>
+              <div id="vaf"></div>
+              <div id="vam"></div>
+              <div id="vaoA"></div>
+            </div>
+            <div id="vlf"></div>
+            <div id="vlm"></div>
+            <div id="vaoL"></div>
+          </div>
+        </section>
+      </main>
+  
+
+
+    <script src="janel.js"></script>
+</body>
+</html>
